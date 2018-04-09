@@ -29,16 +29,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
-        emailField = findViewById(R.id.loginEmailField);
-        passField = findViewById(R.id.loginPasswordField);
-        //passField.setTransformationMethod(new AsteriskPasswordTransformationMethod());
+        emailField = findViewById(R.id.emailText);
+        passField = findViewById(R.id.passwordText);
 
 
         SharedPreferences pref = getSharedPreferences("info", MODE_PRIVATE);
 
 
 
-        findViewById(R.id.signupButton).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.SignupText).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent signupIntent = new Intent(MainActivity.this, SignupActivity.class);
