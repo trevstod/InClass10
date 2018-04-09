@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "849722629910",
+    "firebase_url": "https://inclass10-edf2c.firebaseio.com",
+    "project_id": "inclass10-edf2c",
+    "storage_bucket": "inclass10-edf2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849722629910:android:dd33b39d287f9599",
+        "android_client_info": {
+          "package_name": "com.example.treven.inclass10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849722629910-j7pv8r0k7ickmjuu0d7ietb92gae0loi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.treven.inclass10",
+            "certificate_hash": "221f427dc3e88fedabf1de093308202e98bbb39a"
+          }
+        },
+        {
+          "client_id": "849722629910-7d3sakn5uvm14g7apu4lpmf1ftmpul9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc2KV-FVeK_tDgNAO75gWPUDr9sPcNq2E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849722629910-7d3sakn5uvm14g7apu4lpmf1ftmpul9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
