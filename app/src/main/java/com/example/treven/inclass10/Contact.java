@@ -1,6 +1,6 @@
 package com.example.treven.inclass10;
 
-<<<<<<< HEAD
+
 import java.util.ArrayList;
 
 public class Contact{
