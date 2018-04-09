@@ -27,7 +27,7 @@ public class ContactsActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new Adapter();
+        mAdapter = new ContactAdapter();
         mRecyclerView.setAdapter(mAdapter);
     }
 }
