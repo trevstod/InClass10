@@ -1,7 +1,5 @@
 package com.example.treven.inclass10;
 
-import java.util.ArrayList;
-
 public class Contact{
 
     String name, eMail, phone;

@@ -22,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+<<<<<<< HEAD
 public class ContactAdapter extends ArrayAdapter<Contact>
 {
 private Context context;
@@ -59,8 +60,10 @@ public View getView(int position, View convertView, ViewGroup parent)
         return convertView;
         }
 }/* extends RecyclerView.Adapter<Adapter.ViewHolder> {
+=======
+public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
+>>>>>>> 38e4664263f46ed6e8c4a5ff460e8a2d3915d5c5
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference("expenses");
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         private ArrayList<Contact> dataset = new ArrayList<>();
 
@@ -109,7 +112,7 @@ public View getView(int position, View convertView, ViewGroup parent)
 
         // Create new views (invoked by the layout manager)
         @Override
-        public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+        public ContactAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
             // create a new view
             ConstraintLayout v = (ConstraintLayout) LayoutInflater.from(parent.getContext())
@@ -139,4 +142,3 @@ public View getView(int position, View convertView, ViewGroup parent)
             return dataset.size();
         }
 }
-*/
