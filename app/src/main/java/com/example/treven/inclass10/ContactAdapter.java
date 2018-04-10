@@ -22,7 +22,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-<<<<<<< HEAD
 public class ContactAdapter extends ArrayAdapter<Contact>
 {
 private Context context;
