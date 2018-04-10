@@ -39,7 +39,7 @@ public class EditContactActivity extends AppCompatActivity {
         user = mAuth.getCurrentUser();
         cList = new ArrayList<>();
         nameField = findViewById(R.id.editFirstNameField);
-        emailField = findViewById(R.id.editLastNameField);
+        emailField = findViewById(R.id.editUsernameField2);
         phoneField = findViewById(R.id.editPhoneNumberField);
         editImageButton = findViewById(R.id.imageButton);
 
