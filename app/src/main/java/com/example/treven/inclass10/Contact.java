@@ -1,7 +1,14 @@
 package com.example.treven.inclass10;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> a5db2bc1885a08798b9924a276aa55c6066dca2d
 import java.util.ArrayList;
 
+>>>>>>> 497123e11f70dfb4ab934b6fb8500d85a72c1aba
 public class Contact{
 
     String fName, lName, eMail, phone;
