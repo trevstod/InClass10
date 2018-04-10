@@ -10,11 +10,9 @@
         android:id="@+id/imageButton"
         android:layout_width="79dp"
         android:layout_height="76dp"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="32dp" />
 
     <EditText
         android:id="@+id/editFirstNameField"
@@ -44,6 +42,18 @@
         android:id="@+id/editPhoneNumberField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLastNameField" />
+
+    <EditText
+        android:id="@+id/editUsernameField2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
         android:layout_marginTop="10dp"
         android:ems="10"
@@ -52,37 +62,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editLastNameField" />
 
-    <EditText
-        android:id="@+id/passwordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Password (min 8 characters)"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPhoneNumberField" />
-
-    <EditText
-        android:id="@+id/repeatpasswordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Repeat Password"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
-
     <Button
-        android:id="@+id/SignUpbutton"
+        android:id="@+id/editContactButton"
         android:layout_width="143dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="31dp"
         android:layout_marginStart="45dp"
-        android:text="Sign Up"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

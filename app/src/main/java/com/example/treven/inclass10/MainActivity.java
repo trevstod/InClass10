@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
-        emailField = findViewById(R.id.emailText);
+        emailField = findViewById(R.id.editPhoneNumberField);
         passField = findViewById(R.id.passwordText);
 
 

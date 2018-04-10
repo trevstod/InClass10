@@ -35,11 +35,11 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
-        emailField = findViewById(R.id.emailText2);
-        passField = findViewById(R.id.passwordText2);
+        emailField = findViewById(R.id.editPhoneNumberField);
+        passField = findViewById(R.id.passwordText);
         otherPass =  findViewById(R.id.repeatpasswordText);
-        firstname = findViewById(R.id.editText);
-        lastname = findViewById(R.id.lastNameText);
+        firstname = findViewById(R.id.editFirstNameField);
+        lastname = findViewById(R.id.editLastNameField);
         mAuth = FirebaseAuth.getInstance();
 
 
