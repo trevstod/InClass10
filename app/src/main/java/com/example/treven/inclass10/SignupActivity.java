@@ -1,6 +1,9 @@
 package com.example.treven.inclass10;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -105,18 +108,29 @@ public class SignupActivity extends AppCompatActivity {
                                                 Toast.LENGTH_SHORT).show();
                                         //updateUI(null);
                                     }
-
-
                                 }
                             });
                 }
-
-
-
-
-
             }
         });
 
+    }
+    private boolean checkCameraHardware(Context context){
+        if(context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public static Camera getCameraInstance(){
+        Camera c = null;
+        try{
+            c = Camera.open();
+        }
+        catch(Exception e){
+
+        }
+        return c;
     }
 }

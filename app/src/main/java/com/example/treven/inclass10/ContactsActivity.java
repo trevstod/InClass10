@@ -74,7 +74,7 @@ public class ContactsActivity extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.imageViewAddContact).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.PictureView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent signupIntent = new Intent(ContactsActivity.this, EditContactActivity.class);
