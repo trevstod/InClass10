@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ContactAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class ContactAdapter{}/* extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         DatabaseReference database = FirebaseDatabase.getInstance().getReference("expenses");
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
@@ -101,3 +101,4 @@ public class ContactAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             return dataset.size();
         }
 }
+*/

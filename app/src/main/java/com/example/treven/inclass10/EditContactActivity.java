@@ -52,7 +52,7 @@ public class EditContactActivity extends AppCompatActivity {
 
                 Contact newContact = new Contact(nameField.getText().toString(),
                         emailField.getText().toString(),
-                        phoneField.getText().toString();
+                        phoneField.getText().toString());
 
                 Intent contactListIntent = new Intent(EditContactActivity.this, ContactsActivity.class);
 
