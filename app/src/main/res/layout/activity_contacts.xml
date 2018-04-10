@@ -7,7 +7,11 @@
     tools:context=".ContactsActivity">
 
     <EditText
+<<<<<<< HEAD
+        android:id="@+id/editFirstNameField"
+=======
         android:id="@+id/editTextfName"
+>>>>>>> a5db2bc1885a08798b9924a276aa55c6066dca2d
         android:layout_width="84dp"
         android:layout_height="43dp"
         android:ems="10"
