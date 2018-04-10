@@ -1,5 +1,6 @@
 package com.example.treven.inclass10;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,9 +22,48 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ContactAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+<<<<<<< HEAD
+public class ContactAdapter extends ArrayAdapter<Contact>
+{
+private Context context;
+private ArrayList<Contact> expenses;
+private int resource;
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference("expenses");
+
+public ContactAdapter(Context context, ArrayList<Contact> expenses, int resource)
+        {
+        super(context, resource, expenses);
+        this.context = context;
+        this.expenses = expenses;
+        this.resource = resource;
+        }
+
+@Override
+public View getView(int position, View convertView, ViewGroup parent)
+        {
+        if(convertView == null)
+        {
+        LayoutInflater inflater =
+        (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        convertView = inflater.inflate(resource, parent, false);
+        }
+
+        Contact contact = expenses.get(position);
+
+        TextView textName = (TextView) convertView.findViewById(R.id.textViewContactName);
+        TextView textAmount = (TextView) convertView.findViewById(R.id.textViewPhone);
+
+        textName.setText(contact.getname());
+        textAmount.setText("$" + contact.getPhone());
+
+        return convertView;
+        }
+}/* extends RecyclerView.Adapter<Adapter.ViewHolder> {
+=======
+public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
+>>>>>>> 38e4664263f46ed6e8c4a5ff460e8a2d3915d5c5
+
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         private ArrayList<Contact> dataset = new ArrayList<>();
 
@@ -71,7 +112,7 @@ public class ContactAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         // Create new views (invoked by the layout manager)
         @Override
-        public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+        public ContactAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
             // create a new view
             ConstraintLayout v = (ConstraintLayout) LayoutInflater.from(parent.getContext())
