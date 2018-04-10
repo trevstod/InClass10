@@ -20,9 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ContactAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference("expenses");
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         private ArrayList<Contact> dataset = new ArrayList<>();
 
@@ -71,7 +70,7 @@ public class ContactAdapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         // Create new views (invoked by the layout manager)
         @Override
-        public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+        public ContactAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                      int viewType) {
             // create a new view
             ConstraintLayout v = (ConstraintLayout) LayoutInflater.from(parent.getContext())

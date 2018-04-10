@@ -7,41 +7,60 @@
     tools:context=".ContactsActivity">
 
     <EditText
-<<<<<<< HEAD
-        android:id="@+id/editFirstNameField"
-=======
         android:id="@+id/editTextfName"
->>>>>>> a5db2bc1885a08798b9924a276aa55c6066dca2d
         android:layout_width="84dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="First"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/contacts_recycler"
+        app:layout_constraintEnd_toStartOf="@+id/editTextlName"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextlName"
         android:layout_width="101dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Last"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/contacts_recycler"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="100dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/contacts_recycler"
         android:layout_width="368dp"
         android:layout_height="436dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="67dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="8dp" />
 
     <ImageButton
         android:id="@+id/imageButtonUserEdit"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edit_profile"
-        tools:layout_editor_absoluteX="205dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/contacts_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextlName"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
