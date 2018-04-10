@@ -1,36 +1,25 @@
 package com.example.treven.inclass10;
 
-<<<<<<< HEAD
-=======
-
-import java.util.ArrayList;
-
->>>>>>> 497123e11f70dfb4ab934b6fb8500d85a72c1aba
 public class Contact{
 
-    String fName, lName, eMail, phone;
+    String name, eMail, phone;
 
-    public Contact(String fName, String lName, String eMail, String phone) {
-        this.fName = fName;
-        this.lName = lName;
+    public Contact() {
+        //Empty Constructor
+    }
+
+    public Contact(String name, String eMail, String phone) {
+        this.name = name;
         this.eMail = eMail;
         this.phone = phone;
     }
 
-    public String getfName() {
-        return fName;
+    public String getname() {
+        return name;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setname(String lName) {
+        this.name = lName;
     }
 
     public String geteMail() {
