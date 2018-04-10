@@ -18,49 +18,35 @@
         android:id="@+id/editFirstNameField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
-
-    <EditText
-        android:id="@+id/editLastNameField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editFirstNameField" />
 
     <EditText
         android:id="@+id/editPhoneNumberField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="68dp"
         android:ems="10"
         android:hint="Phone Number"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLastNameField" />
+        tools:layout_editor_absoluteY="246dp" />
 
     <EditText
         android:id="@+id/editUsernameField2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="84dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLastNameField" />
+        tools:layout_editor_absoluteY="187dp" />
 
     <Button
         android:id="@+id/editContactButton"

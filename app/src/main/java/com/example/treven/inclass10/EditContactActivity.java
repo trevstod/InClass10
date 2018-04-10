@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class EditContactActivity extends AppCompatActivity {
 
     EditText nameField;
-    EditText lastField;
     EditText emailField;
     EditText phoneField;
     private DatabaseReference mDatabase;
@@ -40,7 +39,6 @@ public class EditContactActivity extends AppCompatActivity {
         user = mAuth.getCurrentUser();
         cList = new ArrayList<>();
         nameField = findViewById(R.id.editFirstNameField);
-        lastField = findViewById(R.id.editLastNameField);
         emailField = findViewById(R.id.editLastNameField);
         phoneField = findViewById(R.id.editPhoneNumberField);
         editImageButton = findViewById(R.id.imageButton);
@@ -53,7 +51,6 @@ public class EditContactActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Contact newContact = new Contact(nameField.getText().toString(),
-                        lastField.getText().toString(),
                         emailField.getText().toString(),
                         phoneField.getText().toString();
 
