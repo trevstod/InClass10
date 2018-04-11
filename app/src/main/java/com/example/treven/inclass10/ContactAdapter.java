@@ -59,9 +59,8 @@ public View getView(int position, View convertView, ViewGroup parent)
         return convertView;
         }
 }/* extends RecyclerView.Adapter<Adapter.ViewHolder> {
-=======
+
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
->>>>>>> 38e4664263f46ed6e8c4a5ff460e8a2d3915d5c5
 
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         private ArrayList<Contact> dataset = new ArrayList<>();

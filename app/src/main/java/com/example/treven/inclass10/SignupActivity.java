@@ -3,8 +3,11 @@ package com.example.treven.inclass10;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -21,6 +24,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
+import java.io.File;
+
 /**
  * Created by Treven on 4/9/18.
  */
@@ -34,6 +39,7 @@ public class SignupActivity extends AppCompatActivity {
     EditText lastname;
     EditText otherPass;
     ImageView imageView;
+    static final int CAM_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +58,11 @@ public class SignupActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                File file = getFile();
+                camera_intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+                startActivityForResult(camera_intent, CAM_REQUEST);
+
 
             }
         });
@@ -115,22 +126,17 @@ public class SignupActivity extends AppCompatActivity {
         });
 
     }
-    private boolean checkCameraHardware(Context context){
-        if(context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
-            return true;
-        }else{
-            return false;
+    private File getFile(){
+        File folder = new File("Sdcard/camera_app");
+
+        if (!folder.exists()){
+            folder.mkdir();
         }
+        File image_file = new File(folder,"cam_image.jpg");
+        return image_file;
     }
-
-    public static Camera getCameraInstance(){
-        Camera c = null;
-        try{
-            c = Camera.open();
-        }
-        catch(Exception e){
-
-        }
-        return c;
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        String path = "sdcard/camera_app/cam_imagejpg";
+        imageView.setImageDrawable(Drawable.createFromPath(path));
     }
 }
